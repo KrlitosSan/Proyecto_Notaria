@@ -1,0 +1,13 @@
+{
+  "name": "gestion-notarial",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "test:e2e": "npx playwright test",
+    "test:e2e:headed": "npx playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}

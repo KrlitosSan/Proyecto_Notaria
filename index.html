@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión Notarial</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+<header>
+    <button id="btn-menu" class="hamburger" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">☰</button>
+    <h1>Gestión Notarial</h1>
+    <div style="margin-left:auto; display:flex; gap:8px; align-items:center;">
+        <input id="usuario_actual" placeholder="Usuario" style="padding:4px;">
+        <button id="btn-guardar-usuario" class="btn">Guardar</button>
+    </div>
+</header>
+
+<nav id="menu" class="menu" role="navigation" aria-hidden="true">
+    <a class="menu-link" data-target="ingreso">Ingreso</a>
+    <a class="menu-link" data-target="pagos">Pagos</a>
+    <a class="menu-link" data-target="particulares">Particulares</a>
+    <a class="menu-link" data-target="consolidado">Consolidado</a>
+    <a class="menu-link" data-target="certificados">Certificados</a>
+    <a class="menu-link" data-target="validacion">Validación</a>
+    <a class="menu-link" data-target="auditoria">Auditoría</a>
+</nav>
+
+<main>
+    <!-- INGRESO -->
+    <section id="ingreso" class="section"></section>
+
+    <!-- PAGOS -->
+    <section id="pagos" class="section"></section>
+
+    <!-- PARTICULARES -->
+    <section id="particulares" class="section"></section>
+
+    <!-- CONSOLIDADO -->
+    <section id="consolidado" class="section"></section>
+
+    <!-- CERTIFICADOS -->
+    <section id="certificados" class="section"></section>
+
+    <!-- VALIDACION -->
+    <section id="validacion" class="section"></section>
+
+    <!-- AUDITORÍA -->
+    <section id="auditoria" class="section"></section>
+</main>
+
+<script type="module" src="js/app.js"></script>
+<script type="module">
+  // Ejecutar pruebas básicas abriendo la app con ?test=1 (por ejemplo: index.html?test=1)
+  if (location.search.includes('test=1')) {
+    import('./js/tests/basic.js').then(mod => mod.runBasicTests()).catch(console.error);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {margin:0;font-family:Arial,sans-serif;background:#f2f2f2;color:#222;}
+header{display:flex;align-items:center;background:#1a3557;padding:10px 15px;color:white;}
+header h1{margin:0;font-size:20px;}
+.hamburger{font-size:22px;margin-right:15px;background:transparent;border:none;color:white;cursor:pointer;}
+.menu{position:fixed;top:0;left:0;width:220px;height:100vh;background:#243e63;display:flex;flex-direction:column;padding-top:60px;transition:transform .3s;transform:translateX(-100%);z-index:10;}
+.menu.show{transform:translateX(0);}
+.menu-link{color:white;padding:12px 20px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.1);cursor:pointer;}
+.menu-link:hover{background:rgba(255,255,255,0.15);}
+main{margin:20px;}
+.section{display:none;background:white;padding:20px;border-radius:6px;}
+.section.visible{display:block;}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px;}
+.form input,.form select,.form textarea{padding:8px;border:1px solid #ccc;border-radius:4px;}
+.form textarea{grid-column:span 2;resize:vertical;}
+.btn{padding:10px 14px;background:#1a3557;color:white;border:none;cursor:pointer;border-radius:4px;}
+.btn:hover{background:#13263c;}
+.table{width:100%;border-collapse:collapse;margin-top:10px;background:white;}
+.table thead{background:#1a3557;color:white;}
+.table th,.table td{border:1px solid #c4c4c4;padding:8px;font-size:14px;text-align:left;}
+.table tbody tr:nth-child(even){background:#f7f7f7;}
+h2,h3{margin-top:0;}
+@media(max-width:768px){main{margin:10px;} .table th,.table td{font-size:12px;padding:6px;} }
+.hidden{display:none !important;}
+
+/* Mensajes inline para formularios */
+.error-message{color:#b00020;background:#fff0f0;border:1px solid #f1c0c0;padding:8px;margin-bottom:8px;border-radius:4px;font-weight:600;}
+
+/* Modal */
+#app-modal .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:9999}
+#app-modal .modal-window{background:white;padding:16px;border-radius:6px;min-width:320px;max-width:720px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+#app-modal label{font-size:13px;margin-bottom:4px;display:block}
+#app-modal input,#app-modal textarea{padding:8px;border:1px solid #ccc;border-radius:4px}
+
+/* Import report */
+.import-report{margin-top:8px;padding:8px;border-radius:4px;background:#f5f9f6;border:1px solid #dfeede;color:#1a5b2a}
+
+/* Toast */
+.toast{background:#1a3557;color:white;padding:8px 12px;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,0.2);font-weight:600}
+
